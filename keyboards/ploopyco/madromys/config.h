@@ -18,8 +18,21 @@
 
 #pragma once
 
+#define TAPPING_TERM 175
+
+/* --- Mouse Acceleration (Quadratic) --- */
+#define ACCEL_OFFSET 10      // Threshold (counts) to start acceleration
+#define ACCEL_SLOPE 1.8      // Aggressiveness of acceleration (Curve Steepness)
+#define ACCEL_LIMIT 4.0      // Maximum multiplier cap
+
+/* --- Scroll Configuration (Hysteresis & High-Res) --- */
+#define SCROLL_SENSITIVITY 1.4f     // Multiplier for fine-grained scroll speed
+#define SCROLL_STRAIGHT_FACTOR 0
+#define SCROLL_UNLOCK_THRESHOLD 30
+#define POINTING_DEVICE_TASK_THROTTLE_MS 1 // High refresh rate for smooth scroll
+
 #define POINTING_DEVICE_HIRES_SCROLL_ENABLE
-#define POINTING_DEVICE_HIRES_SCROLL_MULTIPLIER 120
+#define POINTING_DEVICE_HIRES_SCROLL_MULTIPLIER 60
 #define WHEEL_EXTENDED_REPORT // Necessary to send wheel reports with 16-bit values to avoid overflowing
 
 #define PLOOPY_DRAGSCROLL_MOMENTARY
